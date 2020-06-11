@@ -46,6 +46,7 @@ const breadthFirstSearchParent = (array, id) => {
 const mutations = {
 
   [types.SET_ACTIVE_LAYER]: (state, payload) => {
+    console.log('layer', payload);
     let newLayer = cloneDeep(state.activeLayer)
     newLayer.lineage.push(payload.text)
     newLayer.id = payload.id
@@ -54,7 +55,7 @@ const mutations = {
   },
 
   [types.UP_ONE_LAYER]: (state, payload) => {
-    // console.log("This is our payload",payload)
+    console.log("This is our payload",payload)
     // console.log("we are looking for the parent in here",state.componentMap[state.activeComponent].htmlList)
     if (state.activeLayer.lineage.length === 1) {
       state.activeLayer = {
