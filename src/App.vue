@@ -169,6 +169,7 @@ export default {
   name: 'App',
   mixins: [redoMixin]
 }
+export { ignoredActions }
 </script>
 
 <style>
